@@ -4,7 +4,7 @@ const iconMap = {
   food: '🍜',
   shopping: '🛍️',
   view: '✨',
-  temple: '🏯',
+  temple: '⛩️',
   park: '🌳',
   breakfast: '☕',
   airport: '✈️',
@@ -50,10 +50,10 @@ export default function HongKongTripSite() {
       emoji: '🏯',
       // desc: '祈福、美食、文青街區，體驗港島經典一日遊',
       items: [
-        { time: '10:00', text: '黃大仙祠祈福', map: 'https://maps.app.goo.gl/aNwUhWRpc1ptRAh98' },
-        { time: '11:00', text: '泡泡馬特樂園', map: '' },
-        { time: '14:00', text: '中環逛街＆波羅包', map: '' },
-        { time: '17:00', text: '上環叮叮電車體驗', map: '' }
+        { time: '10:00', text: '黃大仙', map: 'https://maps.app.goo.gl/aNwUhWRpc1ptRAh98' },
+        { time: '11:00', text: '', map: '' },
+        { time: '14:00', text: '中環', map: '' },
+        { time: '17:00', text: '', map: '' }
       ]
     },
     {
@@ -62,7 +62,7 @@ export default function HongKongTripSite() {
       emoji: '✈️',
       // desc: '享受最後的港式早餐，帶著美好回憶和伴手禮返程',
       items: [
-        { time: '8:00', text: '港式早餐＆叉燒飯', map: 'https://maps.google.com/?q=Tsim+Sha+Tsui+Breakfast+Hong+Kong' },
+        { time: '8:00', text: '港式早餐', map: 'https://maps.google.com/?q=Tsim+Sha+Tsui+Breakfast+Hong+Kong' },
         { time: '10:00', text: '香港機場', map: 'https://maps.google.com/?q=Hong+Kong+International+Airport' }
       ]
     }
@@ -75,10 +75,10 @@ export default function HongKongTripSite() {
         {/* 裝飾元素 */}
         <div className="absolute top-10 right-10 text-6xl opacity-20 animate-pulse">🎀</div>
         <div className="absolute bottom-20 left-10 text-5xl opacity-20 animate-pulse">✨</div>
-        <div className="absolute bottom-1/4 right-1/4 text-4xl opacity-15">🏙️</div>
+        {/* <div className="absolute bottom-1/4 right-1/4 text-4xl opacity-15">🏙️</div> */}
         
         <div className="text-center px-8 z-10">
-          <div className="text-7xl mb-6 animate-bounce">🌃</div>
+          <div className="text-7xl mb-6 animate-bounce">🇭🇰</div>
           <h1 className="text-6xl md:text-7xl font-light mb-6 text-[#5E5A56] tracking-wide">
             香港三天兩夜
           </h1>
@@ -91,10 +91,10 @@ export default function HongKongTripSite() {
           
           {/* 香港元素icon */}
           <div className="flex justify-center gap-6 mt-10 text-3xl">
-            <span className="transform hover:scale-125 transition">🎀</span>
+            <span className="transform hover:scale-125 transition">🥨</span>
             <span className="transform hover:scale-125 transition">🚊</span>
             <span className="transform hover:scale-125 transition">🥐</span>
-            <span className="transform hover:scale-125 transition">🍖</span>
+            <span className="transform hover:scale-125 transition">🍳</span>
           </div>
         </div>
       </section>
@@ -105,15 +105,15 @@ export default function HongKongTripSite() {
           <div key={idx} className="mb-12 scroll-mt-20">
             {/* 日期卡片頭部 */}
             <div className="flex items-center gap-4 mb-6">
-              <div className="text-5xl">{card.emoji}</div>
+              <div className="text-3xl">{card.emoji}</div>
               <div className="flex-1">
                 <div className="flex items-baseline gap-2">
-                  <p className="text-xs tracking-[0.2em] text-[#B5A89D] font-semibold">{card.day}</p>
+                  <h3 className="text-md tracking-[0.2em] text-[#B5A89D] font-semibold">{card.day}</h3>
                   <div className="flex-1 h-px bg-gradient-to-r from-[#D9CCC0] to-transparent"></div>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-light text-[#5E5A56] mt-2">
+                <p className="font-light text-[#5E5A56] mt-2 text-left text-xl">
                   {card.title}
-                </h2>
+                </p>
               </div>
             </div>
             
@@ -150,7 +150,7 @@ export default function HongKongTripSite() {
                             <p className="text-sm text-[#B5A89D] font-semibold tracking-widest text-left">
                               {item.time}
                             </p>
-                            <p className="text-[#5E5A56] font-medium text-base mt-1">
+                            <p className="text-[#5E5A56] font-medium text-base mt-1 text-left">
                               {item.text}
                             </p>
                           </div>
@@ -171,11 +171,8 @@ export default function HongKongTripSite() {
       </div>
 
       {/* 頁尾 */}
-      <div className="mt-20 py-12 border-t border-[#D9CCC0] border-opacity-30">
+      {/* <div className="mt-20 py-12 border-t border-[#D9CCC0] border-opacity-30">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          {/* <p className="text-[#A39A8F] text-sm tracking-widest mb-4">
-            ✨ 探索香港，記錄美好 ✨
-          </p> */}
           <div className="flex justify-center gap-4 text-4xl">
             <span>🎀</span>
             <span>🚊</span>
@@ -183,7 +180,7 @@ export default function HongKongTripSite() {
             <span>🍖</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
